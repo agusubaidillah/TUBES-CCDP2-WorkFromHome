@@ -1,0 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Lenovo
+ */
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Single implements Data {
+
+   @Override
+   public List<Apoteker> meetCriteria(List<Apoteker> persons) {
+      List<Apoteker> singlePersons = new ArrayList<Apoteker>(); 
+      
+      for (Apoteker apoteker : persons) {
+         if(apoteker.getMaritalStatus().equalsIgnoreCase("Belum Menikah")){
+            singlePersons.add(apoteker);
+         }
+      }
+      return singlePersons;
+   }
+}
